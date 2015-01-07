@@ -64,22 +64,6 @@ module.exports = {
     return arr.join().split(',').map(sequential_map).reduce(mult_reduce);
   },
 
-  // 1. When the input was 2 your output was incorrect.
-  // So, only works on numbers greater than 2.
-  PrimeTime: function (num) {
-    var sequential_map = function (el, i) {
-      return i + 2;
-    }
-
-    var mod_reduce = function (prev, next) {
-      return prev || num % next === 0;
-    }
-
-    var arr = new Array(num - 2);
-
-    return !arr.join().split(',').map(sequential_map).reduce(mod_reduce, false);
-  },
-
   ExOh: function (str) {
     var reduce_count_str = function (prev, next) {
       prev[next] = prev[next] ? prev[next] + 1 : 1;
