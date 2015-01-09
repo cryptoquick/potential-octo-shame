@@ -64,6 +64,8 @@ module.exports = {
     return arr.join().split(',').map(sequential_map).reduce(mult_reduce);
   },
 
+  // 'xxoo'
+
   ExOh: function (str) {
     var reduce_count_str = function (prev, next) {
       prev[next] = prev[next] ? prev[next] + 1 : 1;
